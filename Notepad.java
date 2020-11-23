@@ -116,7 +116,6 @@ public class Notepad extends JFrame {
 						e.printStackTrace();
 					}
 				}
-
 			}
 		});
 
@@ -199,9 +198,8 @@ public class Notepad extends JFrame {
 						e.printStackTrace();
 					}
 				}
-
 			}
-
+			
 			private void open(JTextArea txtMain) {
 				txtMain.setText("");
 				JFileChooser fc = new JFileChooser();
@@ -263,7 +261,6 @@ public class Notepad extends JFrame {
 					e.printStackTrace();
 				}
 			}
-
 		});
 
 		JMenuItem mntmSaveAs = new JMenuItem("Save As...");
@@ -271,7 +268,6 @@ public class Notepad extends JFrame {
 		mntmSaveAs.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				saveas(txtMain);
-
 			}
 
 			private void saveas(JTextArea txtMain) {
@@ -287,7 +283,6 @@ public class Notepad extends JFrame {
 					lastFile = f;
 
 					try {
-
 						BufferedWriter writer = new BufferedWriter(new FileWriter(f));
 						writer.write(txtMain.getText());
 						writer.flush();
@@ -347,7 +342,6 @@ public class Notepad extends JFrame {
 		JMenu mnEdit = new JMenu("Edit");
 		menuBar.add(mnEdit);
 		mnEdit.setMnemonic('E');
-
 	}
 
 	public boolean accept(File f) {
@@ -368,7 +362,5 @@ public class Notepad extends JFrame {
 		} else {
 			return "";
 		}
-
 	}
-
 }
